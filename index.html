@@ -1,3 +1,90 @@
-<link rel="stylesheet" href="style.css">
-<div id="output"></div>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: radial-gradient(
+        circle,
+        #000 25vmin,
+        #024 100vmax
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    canvas {
+      display:block;
+    }
+
+    #output {
+      background-image: radial-gradient(
+        circle farthest-corner at 75% 75%,
+        rgba(0,0,16,1) 0%,
+        rgba(0,16,32,1) 50%,
+        rgba(0,64,48,1) 100%
+      );
+      border-radius: 100%;
+      color: rgb(32, 220, 128);
+      font-family: "Inconsolata", monospace;
+      font-size: 3vmin;
+      line-height: .55em;
+      text-rendering: optimizeSpeed;
+      will-change: contents;
+      white-space: pre;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex; /* Altera para display flex */
+      justify-content: center; /* Centraliza os botões horizontalmente */
+      align-items: center; /* Centraliza os botões verticalmente */
+      margin-top: 20px; /* Adiciona um espaçamento acima do menu */
+      margin-left: 260%;
+    }
+
+    .menu-item {
+      margin-right: 10px;
+    }
+
+    .menu-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+      padding: 5px 10px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+    }
+
+    .menu-link:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <canvas id="globe"></canvas>
+    <ul class="menu">
+      <li class="menu-item"><a href="#" class="menu-link">Tools</a></li>
+      <li class="menu-item"><a href="#" class="menu-link">Tools1</a></li>
+      <li class="menu-item"><a href="#" class="menu-link">Tools2</a></li>
+      <li class="menu-item"><a href="#" class="menu-link">DDOS</a></li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
